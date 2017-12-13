@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Practica1-201318565</title>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.3/angular-route.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<script src="script.js"></script>
+</head>
+<script>
+
+</script>
+<body>
+<div>
+<div>
+<nav class="navbar navbar-inverse" role="navigation" style="padding-left:130px;">
+       <ul class="nav navbar-nav">
+
+    </ul>
+</nav>
+</div>
+<br/>
+<div class="jumbotron"> <p>
+  Bienvenido:
+	 <div class="form-group">
+  <label for="usr">Nombre de Usuario:</label>
+  <input type="text" class="form-control" id="usr">
+</div>
+<div class="form-group">
+  <label for="pwd">Password:</label>
+  <input type="password" class="form-control" id="pwd">
+</div>
+  <button type="button" class="btn btn-primary" onclick="capturar()">Acceder</button>
+</div>
+</body>
+<div id="myAlert" class="alert alert-danger">
+  <strong>Usuario y Password no coinciden!</strong>
+</div>
+<div id="myAlert2" class="alert alert-success">
+  <strong>Bienvenido!!</strong>
+</div>
+<script>
+$('#myAlert').alert('close');
+$('#myAlert2').alert('close');
+document.getElementById("usr").value="";
+document.getElementById("pwd").value="";
+  function capturar()
+    {
+        var id=document.getElementById("usr").value;
+        var pass=document.getElementById("pwd").value;
+        if(id=="admin"){
+           if(pass=="admin"){
+               alert("Bienvenido");
+             window.location.href = "index";
+           }else{
+             alert("Usuario y Password no coinciden");
+       }
+       }else{
+           alert("Usuario y Password no coinciden");
+       }
+     }
+</script>
+</html>
